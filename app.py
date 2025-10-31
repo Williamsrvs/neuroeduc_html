@@ -21,6 +21,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired
 from functools import wraps
+from flask_mysqldb import MySQL
 
 
 
