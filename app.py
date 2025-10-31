@@ -21,8 +21,7 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired
 from functools import wraps
-from flask_mysqldb import MySQL
-
+import mysql.connector
 
 
 app = Flask(__name__)
@@ -80,7 +79,7 @@ def service_control():
             try:
                 cursor.close()
             except: 
-                pass
+                pass    
 
     return render_template('service_control.html', form=form, mensagem=mensagem)
 
